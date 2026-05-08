@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Kaif Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Navbar */
+nav{
+    width:100%;
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    backdrop-filter:blur(10px);
+    background:rgba(15,23,42,0.7);
+    z-index:1000;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:#38bdf8;
+}
+
+nav ul{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* Hero */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:120px 8% 60px;
+}
+
+.hero-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+}
+
+.hero-text h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.hero-text h1 span{
+    color:#38bdf8;
+}
+
+.hero-text p{
+    font-size:18px;
+    line-height:1.7;
+    color:#cbd5e1;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    background:#38bdf8;
+    color:#0f172a;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    background:white;
+}
+
+.hero-image{
+    display:flex;
+    justify-content:center;
+}
+
+.hero-image img{
+    width:320px;
+    border-radius:25px;
+    box-shadow:0 0 30px rgba(56,189,248,0.4);
+}
+
+/* Section */
+section{
+    padding:80px 8%;
+}
+
+.title{
+    font-size:38px;
+    margin-bottom:40px;
+    text-align:center;
+}
+
+/* Cards */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#1e293b;
+    padding:30px;
+    border-radius:20px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#38bdf8;
+}
+
+/* Contact */
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:12px 0;
+    color:#cbd5e1;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:25px;
+    background:#020617;
+    color:#94a3b8;
+}
+
+/* Mobile */
+@media(max-width:900px){
+
+    .hero-container{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .hero-text h1{
+        font-size:40px;
+    }
+
+    nav ul{
+        gap:15px;
+    }
+
+    .hero-image img{
+        width:250px;
+    }
+}
+
+@media(max-width:600px){
+
+    nav{
+        padding:15px 5%;
+    }
+
+    nav ul{
+        font-size:14px;
+    }
+
+    .hero{
+        padding-top:140px;
+    }
+
+    .hero-text h1{
+        font-size:32px;
+    }
+
+    .title{
+        font-size:30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+    <div class="logo">Kaif.</div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="home">
+    <div class="hero-container">
+
+        <div class="hero-text">
+            <h1>Hello, I'm <span>Md Kaif</span></h1>
+
+            <p>
+                Web Developer, Computer Teacher and Tech Enthusiast.
+                I create modern websites and teach students practical computer skills.
+            </p>
+
+            <a href="#contact" class="btn">Contact Me</a>
+        </div>
+
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop" alt="Profile">
+        </div>
+
+    </div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+    <h2 class="title">Skills</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>HTML</h3>
+            <p>Creating responsive website structures and layouts.</p>
+        </div>
+
+        <div class="card">
+            <h3>CSS</h3>
+            <p>Modern UI design, animations and mobile responsive layouts.</p>
+        </div>
+
+        <div class="card">
+            <h3>JavaScript</h3>
+            <p>Interactive websites and frontend functionality.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+    <h2 class="title">Projects</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Computer Classes Website</h3>
+            <p>Modern landing page for local computer classes.</p>
+        </div>
+
+        <div class="card">
+            <h3>Portfolio Website</h3>
+            <p>Personal portfolio with responsive modern design.</p>
+        </div>
+
+        <div class="card">
+            <h3>Student Management UI</h3>
+            <p>Simple dashboard concept for managing students.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+    <h2 class="title">Contact</h2>
+
+    <p>Email: kaif@example.com</p>
+    <p>Phone: +91 9876543210</p>
+    <p>Mithapur, Bihar</p>
+
+    <br>
+
+    <a href="#" class="btn">Download CV</a>
+</section>
+
+<!-- Footer -->
+<footer>
+    © 2026 Md Kaif Portfolio. All Rights Reserved.
+</footer>
+
+<script>
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Simple reveal animation
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', () => {
+
+    cards.forEach(card => {
+
+        const cardTop = card.getBoundingClientRect().top;
+
+        if(cardTop < window.innerHeight - 50){
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0)";
+        }
+
+    });
+
+});
+
+cards.forEach(card => {
+    card.style.opacity = "0";
+    card.style.transform = "translateY(40px)";
+    card.style.transition = "0.6s";
+});
+
+</script>
+
+</body>
+</html>\
